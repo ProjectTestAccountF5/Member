@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="96.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Webpage.LoginController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="80.0" />
+    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="202.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="126.0" minHeight="8.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="259.0" minHeight="4.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label contentDisplay="CENTER" prefHeight="15.0" prefWidth="20.0" text="ID" />
+      <Label text="Password" GridPane.rowIndex="1" />
+      <TextField fx:id="txtid" prefHeight="23.0" prefWidth="323.0" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <PasswordField fx:id="txtpw" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </PasswordField>
+      <HBox prefHeight="23.0" prefWidth="267.0" spacing="20.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="btnok" mnemonicParsing="false" onAction="#LoginProc" prefHeight="23.0" prefWidth="70.0" text="확인" />
+            <Button fx:id="btncancel" mnemonicParsing="false" onAction="#CancelProc" prefHeight="23.0" prefWidth="70.0" text="취소" />
+            <Button fx:id="btnmembership" mnemonicParsing="false" onAction="#OpenMembershipForm" prefHeight="23.0" prefWidth="70.0" text="회원가입" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </HBox>
+   </children>
+</GridPane>
